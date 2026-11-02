@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FORM & FIELD — Design, Places & Visual Stories. A contemporary editorial publication exploring architecture, interiors, photography, and creative spaces. Built with pure CSS Flexbox and Grid.">
+  <title>FORM &amp; FIELD — Design, Places &amp; Visual Stories</title>
+
+  <!-- Google Fonts: Space Grotesk (Editorial Headings) & Inter (Body Reading) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header & Masthead -->
+  <header class="site-header" id="top">
+    <!-- Top Masthead Bar (Flexbox) -->
+    <div class="masthead-bar">
+      <div class="container masthead-inner">
+        <span class="masthead-issue">Issue No. 04 &bull; Autumn Edition</span>
+        <span class="masthead-tagline">Journal of Architecture, Interior Space &amp; Visual Narrative</span>
+        <span class="masthead-location">Zurich &bull; Tokyo &bull; Copenhagen</span>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar (Flexbox) -->
+    <div class="nav-bar">
+      <div class="container nav-inner">
+        <!-- Brand Wordmark -->
+        <a href="#top" class="brand-wordmark" aria-label="FORM & FIELD Homepage">
+          <span class="brand-title">FORM &amp; FIELD</span>
+          <span class="brand-sub">Spatial Living &amp; Design</span>
+        </a>
+
+        <!-- Primary Navigation Links (Flexbox) -->
+        <nav class="site-nav" aria-label="Primary site navigation">
+          <ul class="nav-list">
+            <li><a href="#hero" class="nav-link">Editorial</a></li>
+            <li><a href="#stories" class="nav-link">Stories</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#colophon" class="nav-link">Colophon</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Action CTA (Flexbox child) -->
+        <div class="header-action">
+          <a href="#stories" class="btn btn-outline btn-sm">Explore Index</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main id="main-content">
+    <!-- =======================================================================
+         SECTION B: EDITORIAL HERO (FLEXBOX ALIGNMENT & COMPOSITION)
+         ======================================================================= -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <!-- Hero Text Column (Flexbox Stack) -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-accent">// MONOGRAPH 01</span>
+            <span class="eyebrow-category">Contemporary Architecture</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            Monolithic Serenity: The Alpine Brutalism of Vals
+          </h1>
+
+          <p class="hero-excerpt">
+            Deep in the Swiss canton of Graub&uuml;nden, raw quartzite and cast concrete converge with subterranean thermal waters. A study in thermal mass, acoustic stillness, and the tactile poetry of Peter Zumthor&rsquo;s seminal bathhouse.
+          </p>
+
+          <!-- Publication Metadata Strip (Flexbox) -->
+          <div class="hero-meta">
+            <div class="meta-author">
+              <span class="meta-label">Words by</span>
+              <span class="meta-name">H&eacute;l&egrave;ne Moreau</span>
+            </div>
+            <div class="meta-reading">
+              <span class="meta-label">Reading Time</span>
+              <span class="meta-value">8 Min Long-Form</span>
+            </div>
+            <div class="meta-date">
+              <span class="meta-label">Published</span>
+              <time datetime="2026-10-12" class="meta-value">October 2026</time>
+            </div>
+          </div>
+
+          <!-- Hero Action Button -->
+          <div class="hero-actions">
+            <a href="#stories" class="btn btn-primary">
+              <span>Read The Full Monograph</span>
+              <span class="arrow-glyph" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#gallery" class="btn btn-secondary">
+              <span>View Photographic Series</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Responsive Figure) -->
+        <figure class="hero-media">
+          <div class="media-frame">
+            <img
+              src="assets/images/hero.jpg"
+              alt="Monolithic modern concrete architecture surrounded by alpine trees and water reflections in Vals"
+              class="hero-img"
+              width="1400"
+              height="933"
+            >
+          </div>
+          <figcaption class="hero-caption">
+            <span class="caption-marker" aria-hidden="true">FIG. 01</span>
+            <span>Raw quartzite layering against morning mist &bull; Graub&uuml;nden, Switzerland</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION C: FEATURED STORIES (CSS GRID MULTI-COLUMN COMPOSITION)
+         ======================================================================= -->
+    <section class="stories-section" id="stories" aria-labelledby="stories-title">
+      <div class="container">
+        <!-- Section Header (Flexbox Row) -->
+        <header class="section-header">
+          <div class="header-titles">
+            <span class="section-eyebrow">// SECTION 02 &bull; DISPATCHES</span>
+            <h2 id="stories-title" class="section-title">Curated Stories &amp; Spatial Studies</h2>
+          </div>
+          <p class="section-subtitle">
+            Long-form explorations of tectonic purity, residential stillness, and sustainable craftsmanship across six global territories.
+          </p>
+        </header>
+
+        <!-- CSS Grid: 3 columns on Desktop, 2 on Tablet, 1 on Mobile -->
+        <div class="stories-grid">
+          <!-- Story Card 1 -->
+          <article class="story-card">
+            <div class="card-media">
+              <img
+                src="assets/images/story-1.jpg"
+                alt="Minimalist cast-concrete residential pavilion with geometric openings in Kyoto"
+                class="card-img"
+                loading="lazy"
+                width="800"
+                height="533"
+              >
+              <span class="card-badge">Architecture</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-region">Kyoto, Japan</span>
+                <span class="meta-time">6 Min Read</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#hero" class="card-title-link">Light Infiltration &amp; Cast Concrete Pavilions</a>
+              </h3>
+              <p class="card-summary">
+                Examining how controlled apertures and coarse gravel courtyards soften stark brutalist geometry in contemporary Japanese residences.
+              </p>
+              <div class="card-footer">
+                <span class="author-tag">Kenji Takahashi</span>
+                <span class="read-more" aria-hidden="true">&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Card 2 -->
+          <article class="story-card">
+            <div class="card-media">
+              <img
+                src="assets/images/story-2.jpg"
+                alt="Warm Scandinavian interior with terracotta tiled hearth and oiled white oak furniture"
+                class="card-img"
+                loading="lazy"
+                width="800"
+                height="533"
+              >
+              <span class="card-badge">Interiors</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-region">Copenhagen, Denmark</span>
+                <span class="meta-time">5 Min Read</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#hero" class="card-title-link">Terracotta, Linen &amp; Oiled White Oak</a>
+              </h3>
+              <p class="card-summary">
+                A converted maritime storehouse transformed into a tactile apartment prioritizing natural pigments, acoustic absorption, and thermal warmth.
+              </p>
+              <div class="card-footer">
+                <span class="author-tag">Astrid Lindholm</span>
+                <span class="read-more" aria-hidden="true">&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Card 3 -->
+          <article class="story-card">
+            <div class="card-media">
+              <img
+                src="assets/images/story-3.jpg"
+                alt="Nordic timber studio overlooking Arctic coastal rocks and Atlantic horizon"
+                class="card-img"
+                loading="lazy"
+                width="800"
+                height="533"
+              >
+              <span class="card-badge">Creative Spaces</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-region">Lofoten, Norway</span>
+                <span class="meta-time">7 Min Read</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#hero" class="card-title-link">The Lofoten Archipelago Writers&rsquo; Retreat</a>
+              </h3>
+              <p class="card-summary">
+                Constructed on weathered granite skerries, this artist residency harnesses sub-Arctic daylight through expansive clerestory glazing.
+              </p>
+              <div class="card-footer">
+                <span class="author-tag">Einar Solberg</span>
+                <span class="read-more" aria-hidden="true">&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Card 4 -->
+          <article class="story-card">
+            <div class="card-media">
+              <img
+                src="assets/images/story-4.jpg"
+                alt="Rammed earth desert dwelling blending with the sand dunes of the Atacama basin"
+                class="card-img"
+                loading="lazy"
+                width="800"
+                height="533"
+              >
+              <span class="card-badge">Places &amp; Landscapes</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-region">Atacama, Chile</span>
+                <span class="meta-time">9 Min Read</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#hero" class="card-title-link">Earth-Cast Solitude in the Atacama Basin</a>
+              </h3>
+              <p class="card-summary">
+                Passive subterranean cooling and native volcanic earth walls allow this research shelter to withstand intense high-altitude thermal swings.
+              </p>
+              <div class="card-footer">
+                <span class="author-tag">Mateo Silva</span>
+                <span class="read-more" aria-hidden="true">&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Card 5 -->
+          <article class="story-card">
+            <div class="card-media">
+              <img
+                src="assets/images/story-5.jpg"
+                alt="Handcrafted cedar timber joinery inside a historic Kyoto tea sanctuary"
+                class="card-img"
+                loading="lazy"
+                width="800"
+                height="533"
+              >
+              <span class="card-badge">Heritage Craft</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-region">Uji, Japan</span>
+                <span class="meta-time">6 Min Read</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#hero" class="card-title-link">The Quiet Geometry of Kigumi Timber Joinery</a>
+              </h3>
+              <p class="card-summary">
+                Documenting four generations of master carpenters crafting nail-free wooden structural frames that flex with seismic earth tremors.
+              </p>
+              <div class="card-footer">
+                <span class="author-tag">Sayaka Mori</span>
+                <span class="read-more" aria-hidden="true">&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Card 6 -->
+          <article class="story-card">
+            <div class="card-media">
+              <img
+                src="assets/images/story-6.jpg"
+                alt="Lush tropical sky-gardens woven through geometric concrete balconies in Singapore"
+                class="card-img"
+                loading="lazy"
+                width="800"
+                height="533"
+              >
+              <span class="card-badge">Urban Ecology</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-region">Singapore</span>
+                <span class="meta-time">5 Min Read</span>
+              </div>
+              <h3 class="card-title">
+                <a href="#hero" class="card-title-link">Rewilding The High-Density Metropolis</a>
+              </h3>
+              <p class="card-summary">
+                Biophilic ventilation corridors and deep cantilevered planters cultivate microclimatic cooling across a twelve-storey residential habitat.
+              </p>
+              <div class="card-footer">
+                <span class="author-tag">Devon Chen</span>
+                <span class="read-more" aria-hidden="true">&rarr;</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION D: ASYMMETRIC PHOTOGRAPHY GALLERY (CSS GRID WITH COLUMN/ROW SPANS)
+         ======================================================================= -->
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <!-- Section Header (Flexbox Row) -->
+        <header class="section-header">
+          <div class="header-titles">
+            <span class="section-eyebrow">// SECTION 03 &bull; EXHIBITION</span>
+            <h2 id="gallery-title" class="section-title">Spatial Perspectives: An Asymmetric Survey</h2>
+          </div>
+          <p class="section-subtitle">
+            A curated photographic exhibition highlighting the interplay of tectonic scale, natural materials, and changing daylight.
+          </p>
+        </header>
+
+        <!-- CSS Grid with Asymmetric Column & Row Spans -->
+        <div class="asymmetric-gallery">
+          <!-- Gallery Item 1: Large Featured Span (Spans 2 columns & 2 rows on desktop) -->
+          <figure class="gallery-item item-hero">
+            <img
+              src="assets/images/gallery-1.jpg"
+              alt="Sweeping curved concrete architectural exterior with dramatic shadow lines"
+              class="gallery-img"
+              loading="lazy"
+              width="1200"
+              height="800"
+            >
+            <figcaption class="gallery-caption">
+              <span class="gallery-tag">01 &bull; Curvilinear Fa&ccedil;ade</span>
+              <span class="gallery-location">Valencia, Spain</span>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 2: Compact Standard Cell -->
+          <figure class="gallery-item item-standard">
+            <img
+              src="assets/images/gallery-2.jpg"
+              alt="Artisanal clay ceramics and woven linen textures bathed in warm afternoon window sunlight"
+              class="gallery-img"
+              loading="lazy"
+              width="800"
+              height="533"
+            >
+            <figcaption class="gallery-caption">
+              <span class="gallery-tag">02 &bull; Tactile Clay &amp; Linen</span>
+              <span class="gallery-location">Oaxaca, Mexico</span>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 3: Tall Vertical Span (Spans 2 rows on desktop) -->
+          <figure class="gallery-item item-tall">
+            <img
+              src="assets/images/gallery-3.jpg"
+              alt="Sculptural concrete helical staircase ascending towards a circular zenith skylight"
+              class="gallery-img"
+              loading="lazy"
+              width="800"
+              height="1000"
+            >
+            <figcaption class="gallery-caption">
+              <span class="gallery-tag">03 &bull; Helical Lightwell</span>
+              <span class="gallery-location">Rome, Italy</span>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 4: Standard Cell -->
+          <figure class="gallery-item item-standard">
+            <img
+              src="assets/images/gallery-4.jpg"
+              alt="Misty mountain valley with tranquil water reflections at dawn"
+              class="gallery-img"
+              loading="lazy"
+              width="800"
+              height="533"
+            >
+            <figcaption class="gallery-caption">
+              <span class="gallery-tag">04 &bull; Misty Alpine Basin</span>
+              <span class="gallery-location">Tyrol, Austria</span>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 5: Standard Cell -->
+          <figure class="gallery-item item-standard">
+            <img
+              src="assets/images/gallery-5.jpg"
+              alt="Minimalist modern living space featuring monolithic raw limestone fireplace"
+              class="gallery-img"
+              loading="lazy"
+              width="800"
+              height="533"
+            >
+            <figcaption class="gallery-caption">
+              <span class="gallery-tag">05 &bull; Limestone Hearth</span>
+              <span class="gallery-location">Antwerp, Belgium</span>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 6: Wide Standard Cell -->
+          <figure class="gallery-item item-standard">
+            <img
+              src="assets/images/gallery-6.jpg"
+              alt="Geometric rhythmic window shadows casting long diagonal lines across an architectural atrium"
+              class="gallery-img"
+              loading="lazy"
+              width="800"
+              height="533"
+            >
+            <figcaption class="gallery-caption">
+              <span class="gallery-tag">06 &bull; Rhythmic Shadows</span>
+              <span class="gallery-location">Berlin, Germany</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION E: ABOUT & EDITORIAL MANIFESTO (FLEXBOX ALIGNMENT)
+         ======================================================================= -->
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-container">
+        <!-- Left Statement (Flexbox child) -->
+        <div class="about-lead">
+          <span class="section-eyebrow">// SECTION 04 &bull; PHILOSOPHY</span>
+          <h2 id="about-title" class="about-quote">
+            &ldquo;We document environments where material authenticity, acoustic stillness, and environmental rhythm coalesce.&rdquo;
+          </h2>
+          <div class="about-signature">
+            <span class="signature-name">The Editorial Collective</span>
+            <span class="signature-role">Zurich &bull; Autumn 2026</span>
+          </div>
+        </div>
+
+        <!-- Right Narrative & Metric Badges (Flexbox Column) -->
+        <div class="about-narrative">
+          <p class="lead-paragraph">
+            <strong>FORM &amp; FIELD</strong> was founded on the belief that physical spaces exert a profound psychological influence on human well-being. Rather than cataloging fleeting architectural fads, our editorial dispatches investigate projects built for generational permanence.
+          </p>
+          <p>
+            From remote coastal artist studios in the Arctic circle to high-density rewilded urban habitats in Southeast Asia, our writers and photographers examine the tactile friction between human habitation and natural topography.
+          </p>
+
+          <!-- Publication Principles Grid/Flexbox -->
+          <div class="manifesto-principles">
+            <div class="principle-item">
+              <span class="principle-number">01</span>
+              <h3 class="principle-title">Material Honesty</h3>
+              <p class="principle-text">Celebrating unfinished concrete, honest timber joinery, and natural earth that weathers gracefully over centuries.</p>
+            </div>
+            <div class="principle-item">
+              <span class="principle-number">02</span>
+              <h3 class="principle-title">Acoustic Stillness</h3>
+              <p class="principle-text">Prioritizing spatial design that buffers the relentless friction of the hyperconnected modern metropolis.</p>
+            </div>
+            <div class="principle-item">
+              <span class="principle-number">03</span>
+              <h3 class="principle-title">Topographic Harmony</h3>
+              <p class="principle-text">Studying architecture that yields to natural contours rather than imposing aggressive geometric dominance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       SECTION F: COLOPHON & FOOTER (FLEXBOX MULTI-COLUMN ARRANGEMENT)
+       ======================================================================= -->
+  <footer class="site-footer" id="colophon">
+    <div class="container footer-container">
+      <!-- Main Footer Columns (Flexbox Container) -->
+      <div class="footer-columns">
+        <!-- Brand & Mission Column -->
+        <div class="footer-col footer-col-brand">
+          <a href="#top" class="footer-logo">FORM &amp; FIELD</a>
+          <p class="footer-tagline">
+            An independent quarterly journal documenting architecture, interior living, and contemplative photography.
+          </p>
+          <p class="footer-issn">
+            ISSN: 2940-8431 &bull; Published by Fieldwork Media Ltd.
+          </p>
+        </div>
+
+        <!-- Navigation Columns -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Journal</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Lead Monograph</a></li>
+            <li><a href="#stories">Curated Dispatches</a></li>
+            <li><a href="#gallery">Photographic Survey</a></li>
+            <li><a href="#about">Editorial Manifesto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Thematic Focus</h4>
+          <ul class="footer-links">
+            <li><a href="#stories">Alpine &amp; Coastal</a></li>
+            <li><a href="#stories">Brutalist Tectonics</a></li>
+            <li><a href="#stories">Heritage Carpentry</a></li>
+            <li><a href="#stories">Urban Rewilding</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Internship Note</h4>
+          <ul class="footer-links">
+            <li><a href="https://codveda.com" target="_blank" rel="noopener noreferrer">Codveda Tech</a></li>
+            <li><a href="#top">Level 2 &bull; Task 1</a></li>
+            <li><a href="#top">Flexbox &amp; Grid Lab</a></li>
+            <li><a href="#top">Standards Compliant</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar (Flexbox Row) -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 FORM &amp; FIELD Publishing Collective &bull; Built for Codveda Internship (Level 2, Task 1)
+        </p>
+        <p class="footer-tech">
+          Engineered with Pure HTML5 &amp; CSS3 &bull; CSS Grid &bull; Flexbox &bull; Zero Frameworks
+        </p>
+        <a href="#top" class="back-to-top" aria-label="Return to top of page">
+          <span>Top</span>
+          <span class="top-glyph" aria-hidden="true">&uarr;</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

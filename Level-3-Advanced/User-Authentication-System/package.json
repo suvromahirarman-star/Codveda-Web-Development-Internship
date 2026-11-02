@@ -1,0 +1,25 @@
+{
+  "name": "user-authentication-system",
+  "version": "1.0.0",
+  "description": "Codveda Level 3 Task 2 - User Authentication System with Node.js, Express, MongoDB Atlas, bcrypt, and JWT",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "start:server": "npm --prefix server start",
+    "build:client": "npm --prefix client run build",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "authentication",
+    "jwt",
+    "bcrypt",
+    "express",
+    "mongodb-atlas",
+    "mongoose",
+    "react",
+    "codveda"
+  ],
+  "author": "Suvro Mahir Arman",
+  "license": "ISC"
+}
+

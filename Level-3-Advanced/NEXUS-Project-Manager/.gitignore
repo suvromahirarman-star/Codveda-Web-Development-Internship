@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & secrets (All directory levels and variants)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+
+# Allow safe example templates to be tracked in version control
+!.env.example
+!.env*.example
+!**/.env.example
+!**/.env*.example
+
+# Production builds
+dist/
+build/
+client/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Editor, OS & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary & test caches
+.eslintcache
+.parcel-cache
+.vite/
+.temp/
+.tmp/

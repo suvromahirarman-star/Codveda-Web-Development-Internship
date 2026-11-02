@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript Lab — Interactive Playground built for Codveda Web Development Internship (Level 1, Task 2). Demonstrates dropdowns, modals, client-side form validation, and event handling.">
+  <title>JavaScript Lab — Interactive Playground | Codveda Internship</title>
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Defer ensures JavaScript runs after HTML DOM is fully parsed -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-badge">&lt;JS /&gt;</span>
+        <span class="brand-title">JavaScript <span class="text-accent">Lab</span></span>
+      </div>
+
+      <nav class="header-nav" aria-label="Lab quick links">
+        <ul class="nav-links">
+          <li><a href="#station-dropdown" class="nav-anchor">Dropdown</a></li>
+          <li><a href="#station-modal" class="nav-anchor">Modal</a></li>
+          <li><a href="#station-form" class="nav-anchor">Form Validation</a></li>
+          <li><a href="#station-events" class="nav-anchor">Event Demos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tag">
+        <span class="status-indicator" aria-hidden="true"></span>
+        <span>Level 1 &bull; Task 2</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-layout">
+    <div class="container">
+      <!-- Hero Introduction -->
+      <section class="hero-card" aria-labelledby="hero-title">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span>DOM Manipulation &bull; Event Listeners &bull; Form Validation</span>
+        </div>
+        <h1 id="hero-title" class="hero-heading">
+          Interactive Webpage <span class="text-accent">Playground</span>
+        </h1>
+        <p class="hero-description">
+          Welcome to the <strong>Codveda JavaScript Lab</strong>. This dashboard demonstrates core JavaScript interactions: accessible dropdown menus, accessible modal dialogs with focus trapping, client-side form validation with field-level feedback, and dynamic live event listeners.
+        </p>
+      </section>
+
+      <!-- Interactive Stations Grid -->
+      <div class="lab-grid">
+
+        <!-- ===================================================================
+             STATION 1: ACCESSIBLE DROPDOWN MENU
+             =================================================================== -->
+        <section class="lab-station" id="station-dropdown" aria-labelledby="dropdown-station-title">
+          <div class="station-header">
+            <span class="station-number">// STATION 01</span>
+            <h2 id="dropdown-station-title" class="station-title">Interactive Dropdown Menu</h2>
+            <p class="station-desc">
+              Demonstrates click events, <code>aria-expanded</code> toggling, outside-click detection, and Escape key dismissal.
+            </p>
+          </div>
+
+          <div class="station-body">
+            <!-- Custom Dropdown Component -->
+            <div class="dropdown-wrapper" id="dropdown-component">
+              <button
+                type="button"
+                id="dropdown-trigger"
+                class="btn btn-outline dropdown-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="dropdown-menu"
+              >
+                <span id="dropdown-label">Select Action Option</span>
+                <span class="chevron-icon" aria-hidden="true">&#9662;</span>
+              </button>
+
+              <ul id="dropdown-menu" class="dropdown-menu" role="menu" hidden>
+                <li role="none">
+                  <button type="button" class="dropdown-item" role="menuitem" data-value="Explore Codebase">
+                    <span class="item-icon" aria-hidden="true">📂</span> Explore Codebase
+                  </button>
+                </li>
+                <li role="none">
+                  <button type="button" class="dropdown-item" role="menuitem" data-value="Run Test Suite">
+                    <span class="item-icon" aria-hidden="true">🧪</span> Run Test Suite
+                  </button>
+                </li>
+                <li role="none">
+                  <button type="button" class="dropdown-item" role="menuitem" data-value="Audit Accessibility">
+                    <span class="item-icon" aria-hidden="true">♿</span> Audit Accessibility
+                  </button>
+                </li>
+                <li role="none">
+                  <button type="button" class="dropdown-item" role="menuitem" data-value="Deploy Staging Build">
+                    <span class="item-icon" aria-hidden="true">🚀</span> Deploy Staging Build
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dynamic Feedback Output -->
+            <div class="console-box" aria-live="polite">
+              <span class="console-label">Dropdown Output:</span>
+              <span id="dropdown-output" class="console-value">No option selected yet.</span>
+            </div>
+
+            <p class="instruction-hint">
+              💡 <strong>Keyboard Support:</strong> Press <kbd>Enter</kbd> or <kbd>Space</kbd> to open/select, <kbd>Escape</kbd> to close, or click anywhere outside.
+            </p>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             STATION 2: ACCESSIBLE MODAL DIALOG
+             =================================================================== -->
+        <section class="lab-station" id="station-modal" aria-labelledby="modal-station-title">
+          <div class="station-header">
+            <span class="station-number">// STATION 02</span>
+            <h2 id="modal-station-title" class="station-title">Accessible Modal Dialog</h2>
+            <p class="station-desc">
+              Demonstrates dialog launching, focus management, backdrop clicking, and focus restoration to the opener button.
+            </p>
+          </div>
+
+          <div class="station-body">
+            <button type="button" id="modal-open-btn" class="btn btn-primary">
+              <span>Open Demonstration Modal</span>
+              <span class="btn-icon" aria-hidden="true">&#8599;</span>
+            </button>
+
+            <!-- Dynamic Feedback Output -->
+            <div class="console-box" aria-live="polite">
+              <span class="console-label">Modal State:</span>
+              <span id="modal-status-output" class="console-value">Modal is currently closed.</span>
+            </div>
+
+            <p class="instruction-hint">
+              💡 <strong>Modal Controls:</strong> When opened, focus is transferred to the close button. Press <kbd>Escape</kbd> or click the backdrop to exit; focus returns to the opening button.
+            </p>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             STATION 3: INTERACTIVE FORM VALIDATION
+             =================================================================== -->
+        <section class="lab-station lab-station-wide" id="station-form" aria-labelledby="form-station-title">
+          <div class="station-header">
+            <span class="station-number">// STATION 03</span>
+            <h2 id="form-station-title" class="station-title">Client-Side Form Validation</h2>
+            <p class="station-desc">
+              Demonstrates real-time input listeners, submit interception via <code>e.preventDefault()</code>, field-specific error messages, and successful validation without page reload.
+            </p>
+          </div>
+
+          <div class="station-body">
+            <!-- Success Feedback Region -->
+            <div id="form-success-banner" class="alert-banner alert-success" role="status" aria-live="polite" hidden>
+              <div class="banner-icon" aria-hidden="true">✓</div>
+              <div class="banner-content">
+                <strong class="banner-title">Demo Registration Validated Successfully!</strong>
+                <p id="form-success-details">All inputs met validation rules. Data was safely checked on the client without transmission.</p>
+              </div>
+            </div>
+
+            <!-- Validation Demonstration Form -->
+            <form id="registration-form" class="interactive-form" novalidate>
+              <div class="form-row">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="full-name" class="form-label">
+                    Full Name <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="fullName"
+                    class="form-input"
+                    placeholder="e.g. Mahir Arman"
+                    autocomplete="name"
+                    aria-describedby="name-error name-help"
+                  >
+                  <span id="name-help" class="form-hint">At least 2 characters, alphabetic characters preferred.</span>
+                  <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="email" class="form-label">
+                    Email Address <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="e.g. name@example.com"
+                    autocomplete="email"
+                    aria-describedby="email-error email-help"
+                  >
+                  <span id="email-help" class="form-hint">Must be a valid email structure (user@domain.tld).</span>
+                  <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <!-- Password -->
+                <div class="form-group">
+                  <label for="password" class="form-label">
+                    Password <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-input"
+                    placeholder="Enter password"
+                    autocomplete="new-password"
+                    aria-describedby="password-error password-help"
+                  >
+                  <span id="password-help" class="form-hint">Minimum 8 characters with at least one number.</span>
+                  <span id="password-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                  <label for="confirm-password" class="form-label">
+                    Confirm Password <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirmPassword"
+                    class="form-input"
+                    placeholder="Re-type password"
+                    autocomplete="new-password"
+                    aria-describedby="confirm-error confirm-help"
+                  >
+                  <span id="confirm-help" class="form-hint">Must match the password entered above.</span>
+                  <span id="confirm-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <!-- Form Action Buttons -->
+              <div class="form-actions">
+                <button type="submit" id="submit-btn" class="btn btn-primary">
+                  <span>Validate &amp; Submit Demo</span>
+                </button>
+                <button type="reset" id="reset-btn" class="btn btn-secondary">
+                  <span>Reset Fields</span>
+                </button>
+              </div>
+
+              <p class="privacy-note">
+                🔒 <strong>Privacy Assurance:</strong> This is a client-side educational exercise. Form data is never sent to any server, logged, or permanently stored. Passwords are wiped from memory immediately upon test completion.
+              </p>
+            </form>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             STATION 4: ADDITIONAL EVENT LISTENERS & STATE DEMOS
+             =================================================================== -->
+        <section class="lab-station" id="station-events" aria-labelledby="events-station-title">
+          <div class="station-header">
+            <span class="station-number">// STATION 04</span>
+            <h2 id="events-station-title" class="station-title">Live Input &amp; State Counters</h2>
+            <p class="station-desc">
+              Demonstrates <code>input</code> listeners for character counting and button <code>click</code> state mutations.
+            </p>
+          </div>
+
+          <div class="station-body station-body-events">
+            <!-- Event Demo A: Real-Time Character Counter -->
+            <div class="sub-station">
+              <label for="feedback-text" class="form-label">
+                Live Character Counter (Max 120 chars)
+              </label>
+              <textarea
+                id="feedback-text"
+                class="form-textarea"
+                rows="3"
+                maxlength="120"
+                placeholder="Type anything here to observe live input event listeners..."
+              ></textarea>
+              <div class="counter-display">
+                <span id="char-remaining-text">Remaining: <strong>120</strong> characters</span>
+                <span id="char-count-badge" class="count-badge">0 / 120</span>
+              </div>
+            </div>
+
+            <!-- Event Demo B: State Counter with Reset -->
+            <div class="sub-station">
+              <span class="form-label">Interactive Click Counter</span>
+              <div class="interactive-counter">
+                <button type="button" id="counter-decrement" class="btn btn-sm btn-secondary" aria-label="Decrement counter">-1</button>
+                <span id="counter-display" class="counter-number">0</span>
+                <button type="button" id="counter-increment" class="btn btn-sm btn-secondary" aria-label="Increment counter">+1</button>
+                <button type="button" id="counter-reset" class="btn btn-sm btn-outline" aria-label="Reset counter to zero">Reset</button>
+              </div>
+              <p class="counter-status" id="counter-status-text">Current state: Neutral</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- =======================================================================
+       MODAL DIALOG OVERLAY (DOM container for Station 2)
+       ======================================================================= -->
+  <div id="modal-backdrop" class="modal-backdrop" hidden>
+    <div
+      id="modal-window"
+      class="modal-window"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-dialog-title"
+      aria-describedby="modal-dialog-desc"
+    >
+      <div class="modal-header">
+        <h3 id="modal-dialog-title" class="modal-title">JavaScript Modal Dialog</h3>
+        <button type="button" id="modal-close-icon" class="modal-close-icon" aria-label="Close dialog window">&times;</button>
+      </div>
+
+      <div class="modal-content" id="modal-dialog-desc">
+        <p>
+          This accessible modal dialog was rendered dynamically via vanilla JavaScript.
+        </p>
+        <div class="modal-feature-list">
+          <div class="feature-item">
+            <strong>Keyboard Trap:</strong> Pressing <kbd>Tab</kbd> cycles inside this dialog.
+          </div>
+          <div class="feature-item">
+            <strong>Escape Key:</strong> Pressing <kbd>Escape</kbd> dismisses this dialog immediately.
+          </div>
+          <div class="feature-item">
+            <strong>Focus Restoration:</strong> When closed, focus returns directly to the opening button.
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" id="modal-confirm-btn" class="btn btn-primary btn-sm">Confirm &amp; Close</button>
+        <button type="button" id="modal-cancel-btn" class="btn btn-secondary btn-sm">Dismiss</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p class="footer-copy">
+        &copy; 2026 Codveda Web Development Internship &bull; Level 1, Task 2: Introduction to JavaScript
+      </p>
+      <p class="footer-standards">
+        Built with Pure Vanilla JavaScript &bull; Semantic HTML5 &bull; Accessible &bull; Zero Frameworks
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+

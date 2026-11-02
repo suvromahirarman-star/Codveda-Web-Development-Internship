@@ -1,0 +1,32 @@
+{
+  "name": "nexus-project-manager",
+  "version": "1.0.0",
+  "description": "NEXUS Full-Stack Project Management SaaS Application (React + Express + MongoDB)",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "start:server": "npm --prefix server start",
+    "build:client": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "test": "npm run test:server && npm run test:client",
+    "test:server": "npm --prefix server test",
+    "test:server:unit": "npm --prefix server run test:unit",
+    "test:server:integration": "npm --prefix server run test:integration",
+    "test:client": "npm --prefix client test",
+    "audit:server": "npm --prefix server audit --omit=dev"
+  },
+  "keywords": [
+    "nexus",
+    "full-stack",
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "mongoose",
+    "codveda"
+  ],
+  "author": "Suvro Mahir Arman",
+  "license": "ISC"
+}
+
