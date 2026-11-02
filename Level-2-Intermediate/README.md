@@ -1,7 +1,7 @@
 # Level 2 — Intermediate Web Applications
 
 > **Codveda Web Development Internship — Advanced Frontend & Modern Frameworks Track**  
-> Author: **Suvro Mahir Arman** ([@suvromahiarman-star](https://github.com/suvromahiarman-star))  
+> Author: **Suvro Mahir Arman** ([@suvromahirarman-star](https://github.com/suvromahirarman-star))  
 > Technologies: **Modern CSS Grid & Flexbox, React 18, Vite, Open-Meteo REST API, Modern Glassmorphism**
 
 ---

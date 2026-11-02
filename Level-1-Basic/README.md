@@ -1,7 +1,7 @@
 # Level 1 — Basic Web Development
 
 > **Codveda Web Development Internship — Foundational Engineering Track**  
-> Author: **Suvro Mahir Arman** ([@suvromahiarman-star](https://github.com/suvromahiarman-star))  
+> Author: **Suvro Mahir Arman** ([@suvromahirarman-star](https://github.com/suvromahirarman-star))  
 > Technologies: **Semantic HTML5, Modern CSS3, Vanilla JavaScript (ES6+), Zero Frameworks**
 
 ---

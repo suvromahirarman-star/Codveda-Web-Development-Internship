@@ -1,7 +1,7 @@
 # Level 3 — Advanced Full-Stack Systems
 
 > **Codveda Web Development Internship — Enterprise Architecture & Security Track**  
-> Author: **Suvro Mahir Arman** ([@suvromahiarman-star](https://github.com/suvromahiarman-star))  
+> Author: **Suvro Mahir Arman** ([@suvromahirarman-star](https://github.com/suvromahirarman-star))  
 > Technologies: **MERN Stack (MongoDB Atlas, Express.js, React 18, Node.js), JWT, bcryptjs, Jest, Supertest**
 
 ---

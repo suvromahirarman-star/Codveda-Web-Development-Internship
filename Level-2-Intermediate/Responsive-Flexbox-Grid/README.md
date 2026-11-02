@@ -2,7 +2,7 @@
 
 **Track:** Level 2 — Intermediate Web Applications  
 **Task:** Task 1 — Responsive Web Design with Flexbox and Grid  
-**Author:** Suvro Mahir Arman ([@suvromahiarman-star](https://github.com/suvromahiarman-star))  
+**Author:** Suvro Mahir Arman ([@suvromahirarman-star](https://github.com/suvromahirarman-star))  
 **Tech Stack:** Pure Semantic HTML5, Modern CSS3 (CSS Flexbox, CSS Grid, CSS Custom Properties &bull; Zero Frameworks &bull; Zero JavaScript)
 
 ---

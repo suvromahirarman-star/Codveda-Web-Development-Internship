@@ -1,9 +1,9 @@
 # 🚀 Codveda Web Development Internship — Monorepo Portfolio
 
-[![Author: Suvro Mahir Arman](https://img.shields.io/badge/Author-Suvro_Mahir_Arman-blue.svg?style=flat&logo=github)](https://github.com/suvromahiarman-star)
-[![Internship: Codveda](https://img.shields.io/badge/Internship-Codveda_Tech_Intern-orange.svg?style=flat)](https://github.com/suvromahiarman-star)
-[![Status: Completed & Audited](https://img.shields.io/badge/Status-Completed_%26_Audited-success.svg?style=flat)](https://github.com/suvromahiarman-star)
-[![Architecture: 3--Tier Monorepo](https://img.shields.io/badge/Architecture-3--Tier_Monorepo-purple.svg?style=flat)](https://github.com/suvromahiarman-star)
+[![Author: Suvro Mahir Arman](https://img.shields.io/badge/Author-Suvro_Mahir_Arman-blue.svg?style=flat&logo=github)](https://github.com/suvromahirarman-star)
+[![Internship: Codveda](https://img.shields.io/badge/Internship-Codveda_Tech_Intern-orange.svg?style=flat)](https://github.com/suvromahirarman-star)
+[![Status: Completed & Audited](https://img.shields.io/badge/Status-Completed_%26_Audited-success.svg?style=flat)](https://github.com/suvromahirarman-star)
+[![Architecture: 3--Tier Monorepo](https://img.shields.io/badge/Architecture-3--Tier_Monorepo-purple.svg?style=flat)](https://github.com/suvromahirarman-star)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](./LICENSE)
 
 [![React 18](https://img.shields.io/badge/React-18.3-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
@@ -196,7 +196,7 @@ Codveda-Web-Development-Internship/
 
 ### 1. Clone the Monorepo
 ```bash
-git clone https://github.com/suvromahiarman-star/Codveda-Web-Development-Internship.git
+git clone https://github.com/suvromahirarman-star/Codveda-Web-Development-Internship.git
 cd Codveda-Web-Development-Internship
 ```
 
@@ -273,7 +273,7 @@ Automated quality assurance and security verification are built into the advance
 **Suvro Mahir Arman**  
 *Full-Stack Software Engineer & Codveda Web Development Intern*
 
-- **GitHub Profile:** [@suvromahiarman-star](https://github.com/suvromahiarman-star)
+- **GitHub Profile:** [@suvromahirarman-star](https://github.com/suvromahirarman-star)
 - **Email:** [suvromahirarman@gmail.com](mailto:suvromahirarman@gmail.com)
 - **Internship Track:** Web Development Internship — Codveda Technologies
 

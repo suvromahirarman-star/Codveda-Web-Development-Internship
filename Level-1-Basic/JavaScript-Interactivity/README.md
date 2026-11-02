@@ -2,7 +2,7 @@
 
 **Track:** Level 1 — Basic Web Development  
 **Task:** Task 2 — Introduction to JavaScript (Interactive Webpage)  
-**Author:** Suvro Mahir Arman ([@suvromahiarman-star](https://github.com/suvromahiarman-star))  
+**Author:** Suvro Mahir Arman ([@suvromahirarman-star](https://github.com/suvromahirarman-star))  
 **Tech Stack:** Pure Vanilla JavaScript (ES6+), Semantic HTML5, Modern CSS3 (Zero Frameworks, Zero External Dependencies)
 
 ---
